@@ -1,5 +1,6 @@
 <xml>
 
+<set name="ABI" value="-MTd" />
 <include name="${HXCPP}/build-tool/BuildCommon.xml"/>
 <set name="CEF" value="./thirdparty/cef3/bin/" if="windows"/>
 <set name="CEF_LIB" value="./thirdparty/cef3/lib/" if="windows"/>

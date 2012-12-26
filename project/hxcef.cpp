@@ -40,8 +40,10 @@ value cef_init()
 	CefSettings settings;
 	CefMainArgs args;
 	settings.multi_threaded_message_loop = true;
+	printf("before init\n");
 	CefInitialize(args, settings, NULL);
-
+	printf("after init\n");
+	
 	HWND hWnd;
 	RECT rect;
 
@@ -60,11 +62,16 @@ value cef_init()
 			break; 
 		hWnd = GetNextWindow(hWnd, GW_HWNDNEXT);
     }
+	
+	printf("hwnd %d\n", hWnd);
 
 	GetClientRect(hWnd, &rect);
+	printf("before client rect\n");
 	info.SetAsChild(hWnd,rect);
+	printf("set as child\n");
 
 	CefBrowserHost::CreateBrowser(info,static_cast< CefRefPtr<CefClient> >(g_handler),"http://www.google.com", browserSettings);
+	printf("create browser\n");
 	
 	return alloc_null();
 }
