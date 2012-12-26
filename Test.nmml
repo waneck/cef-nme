@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="BerkeliumTest" package="com.fullofcaffeine.berkeliumnmetest" version="1.0.0" company="NA" />
+	<app file="BerkeliumNMETest" main="Test" path="bin" />
+	<window width="400" height="400" fps="30" />
+	
+	<classpath name="." />
+	<haxelib name="cef" />
+	<ndll name="hxcef" haxelib="cef" />
+	<haxelib name="nme" />
+  
+</project>

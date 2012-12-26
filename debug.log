@@ -1,0 +1,2 @@
+[1226/183313:WARNING:resource_bundle.cc(209)] locale_file_path.empty()
+[1226/183313:FATAL:main_delegate.cc(420)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
